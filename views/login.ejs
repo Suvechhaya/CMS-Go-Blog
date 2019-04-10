@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<link rel='stylesheet' href='/stylesheets/styleLogin.css' />
+
+</head>
+<body>
+	<div class="menu">
+		<a class="active" href="/">Home</a>
+		<a href="/viewBlog">Blogs</a>
+
+	<a href="/about">About</a>
+	<a href="/signUp">Sign Up</a>
+	<a href="/login">Login</a>
+</div>
+	<h1>Login</h1>
+	<div class="container">
+		<form method="post" action="/login">
+			Username:<input id="username" name="username" type="text"/><br>
+			Password:<input id="password" name="password" type="password"/><br><br>
+			<button type="submit">Login</button>
+		</form>
+	</div>
+</body>
+</html>

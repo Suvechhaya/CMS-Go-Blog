@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Blog</title>
+  <link rel='stylesheet' href='/stylesheets/styleViewBlog.css' />
+
+</head>
+<body>
+
+<div class="menu">
+  <a class="active" href="/">Home</a>
+  <a href="/viewBlog">Blogs</a>
+
+<a href="/about">About</a>
+<a href="/signUp">Sign Up</a>
+<a href="/login">Login</a>
+</div>
+
+<h1>View Blogs:</h1>
+
+
+<div>
+    <form form="myForm" method="post" action="/viewBlog">
+            <% blogs.forEach(function(blog, i) { %>
+                <p><strong><%= blog.title %></strong> </p><p><%= blog.blog %></p>
+
+
+                <button name="editblog" id="editblog" type="submit"><a href="/editblog/<%= blog._id%>">Edit</button>
+
+
+
+                <button name="deleteblog" id="deleteblog"><a href="/deleteblog/<%= blog._id%>">Delete</a></button>
+                <% }) %>
+    </form>
+</div>
+
+
+</body>
+</html>
